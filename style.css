@@ -1,0 +1,37 @@
+body {
+	text-align: center;
+	font-family: "Avenir Next", "Arial", sans-serif;
+	color: white;
+	background-color: lightblue; 
+}
+
+h1 {
+	opacity: 0.75;
+}
+
+select {
+	margin: 1%;
+}
+
+img {
+	width: 15%;
+}
+
+input {
+	border-radius: 5px;
+	border: none;
+	padding: .50%;
+	margin: .5%;
+}
+
+button {
+	border-radius: 5px;
+	border: none;
+	padding: .50%;
+}
+
+select {
+	border-radius: 5px;
+	border: none;
+	padding: .50%;
+}

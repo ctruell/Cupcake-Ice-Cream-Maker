@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+    	//lading the javascript module
+    	let script = document.createElement('script');
+    	script.src = "init2.js";
+	script.type = "module";
+    	document.head.append(script);
+	//open -a "Google Chrome" --args --allow-file-access-from-files
+	//file:///Users/clare/Desktop/ISTE340/index.html
+
+    	//redirecting to error page if module/script fails to load
+    	script.onerror = function() {
+    		//window.location.href = "error.html";
+    	}
+
+    	//onsubmit of form function
+    	function localStor() {
+    		var inputFName = document.getElementById("fname");
+    		var inputLName = document.getElementById("lname");
+    		var inputEmail = document.getElementById("email");
+
+    		window.localStorage.setItem("first name", inputFName.value);
+    		window.localStorage.setItem("last name", inputLName.value);
+    		window.localStorage.setItem("email", inputEmail.value);
+    	}
+    </script>
+    <!--<script src="init.js" type="module"></script>-->
+	<title>Cupcake & Ice Cream Creator</title>
+</head>
+<body>
+	<h1>Cupcake & Ice Cream Creator</h1>
+	<div id="selects">
+    </div>
+    <br>
+    <div id="choices">
+    </div>
+    <div id="selects2">
+    </div>
+    <br>
+    <div id="choices2">
+    </div>
+    <br>
+    <div id="img">
+    </div>
+    <h2>Contact Information</h2>
+    <form name="contact" method="get">
+		<input type="text" name="firstname" placeholder="First Name" id="fname" required><br>
+		<input type="text" name="lastname" placeholder="Last Name" id="lname" required><br>
+		<input type="text" name="email" placeholder="Email" id="email" required><br>
+		<input type="submit" value="Submit" onclick="localStor()"><br>
+	</form>
+	<br>
+	<a href="index.html"><button>Start Over</button></a>
+</body>
+</html>
